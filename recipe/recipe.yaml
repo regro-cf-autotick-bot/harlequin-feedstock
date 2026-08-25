@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: harlequin
-  version: 2.9.0
+  version: 2.10.0
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/harlequin-${{ version }}.tar.gz
-  sha256: b1824b0ba790e65ea3092000a95660d1ba3836c8729b7f7d7dd18364488b4dae
+  sha256: 3a4e61a036367b756d68de494f4563e0086112ecb5194e6d64da769b6e468f96
 
 build:
   number: 0
@@ -33,7 +33,7 @@ requirements:
     - rich-click ==1.9.8
     - python >=${{ python_min }}
     - textual ==8.2.8
-    - textual-fastdatatable ==0.17.1
+    - textual-fastdatatable ==0.19.0
     - textual-textarea ==0.18.1
     - click ==8.4.2
     - shandy-sqlfmt >=0.28.2
@@ -43,6 +43,7 @@ requirements:
     - wcwidth >=0.2.13,<0.9
     - tree_sitter >=0.25,<0.27
     - tomli >=2.0.1
+    - msgspec >=0.19,<1
 tests:
   - python:
       python_version: ${{ python_min }}.*
